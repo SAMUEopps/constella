@@ -61,7 +61,9 @@ export const baseApi = createApi({
 
 import { createApi } from "@reduxjs/toolkit/query/react";
 
-const customBaseQuery = ({ baseUrl } = { baseUrl: "http://localhost:8000/api" }) => 
+const customBaseQuery = ({ baseUrl } = { baseUrl: "https://constella-server.onrender.com" }) =>
+    //const customBaseQuery = ({ baseUrl } = { baseUrl: "http://localhost:8000/api" }) =>  
+
     async ({ url, method = "GET", headers = {}, body = null }, api, extraOptions) => {
         const options = {
             method,
